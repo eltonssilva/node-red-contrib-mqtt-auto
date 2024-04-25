@@ -128,7 +128,7 @@ module.exports = function(RED) {
 
         static createClient(config, status_callback) {
             const client_id = config.payload.client_id;
-            if (DynMQTT.clients.hasOwnProperty(client_id)) {
+            if (DynMQTT.clients?.hasOwnProperty(client_id)) {
                 console.info("Client already known: " + client_id);
                 //ToDo: check health status of client
             } else {
@@ -151,7 +151,7 @@ module.exports = function(RED) {
         }
 
         static getClient(client_id) {
-            if (DynMQTT.clients.hasOwnProperty(client_id)) {
+            if (DynMQTT.clients?.hasOwnProperty(client_id)) {
                 //console.log("Client " + client_id + " is known");
                 //ToDo: check health status of client
                 return DynMQTT.clients[client_id]
@@ -247,10 +247,10 @@ module.exports = function(RED) {
 
             // --- Take care of the previous status (only if it is set)
             if (this.status) {
-                if (DynMQTT.client_stats.hasOwnProperty(this.status))
-                    DynMQTT.client_stats[this.status]--;
+                if (DynMQTT?.client_stats?.hasOwnProperty(this.status))
+                    DynMQTT?.client_stats[this.status]--;
                 else 
-                    DynMQTT.client_stats[this.status] = 0;
+                    DynMQTT?.client_stats[this.status] = 0;
             }
 
             // --- Take care of the new status
@@ -259,7 +259,7 @@ module.exports = function(RED) {
             ret["payload"] = DynMQTT.listClients()
 
             if (this.status != 'closed') { // -- we don't count closed (they will never decrement if reconnect is disabled)
-                if (DynMQTT.client_stats.hasOwnProperty(this.status))
+                if (DynMQTT.client_stats?.hasOwnProperty(this.status))
                     DynMQTT.client_stats[this.status]++;
                 else
                     DynMQTT.client_stats[this.status] = 1;
@@ -276,7 +276,7 @@ module.exports = function(RED) {
         }
 
         subscribe(topic,callback) {
-            if (this.subscriptions.hasOwnProperty(topic)) {
+            if (this.subscriptions?.hasOwnProperty(topic)) {
                 //console.log("Already subscribed");
             } else {
                 this.connection.subscribe(topic, (err, result) => {
@@ -291,7 +291,7 @@ module.exports = function(RED) {
         }
 
         unsubscribe(topic) {
-            if (this.subscriptions.hasOwnProperty(topic)) {
+            if (this.subscriptions?.hasOwnProperty(topic)) {
                 console.info("Removing subscription to:" + topic);
                 this.connection.unsubscribe(topic,(err) => {
                     if (err)
