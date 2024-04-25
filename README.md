@@ -7,7 +7,7 @@ This node is intended to facilitate connection and change of connection credenti
 Diga adeus aos perfis sem graça. Com nossos **[templates de perfil](https://github.com/iuricode/readme-template/tree/main/perfil)**, você terá um readme de perfil íncrivel. Com cores vibrantes,imagens surpreendentes e outros elementos visuais cativantes.
 
 ### mqtt-auto-connect
-<img src="img/connects.png" width="150" alt="Conectar">
+<img src="img/connects.png" width="200" alt="Conectar">
 
 
 
@@ -25,7 +25,7 @@ msg.payload = {
 
 ### mqtt-auto-disconnect
 
-<img src="img/disconnect.png" width="150" alt="Conectar">
+<img src="img/disconnect.png" width="200" alt="Conectar">
 
 
 ```
@@ -34,13 +34,13 @@ msg.client_id = "client_id";
 
 ### mqtt-auto-status
 
-<img src="img/status.png" width="150" alt="Conectar">
+<img src="img/status.png" width="200" alt="Conectar">
 
 
 
 ### mqtt-auto-subscribe
 
-<img src="img/subscribe.png" width="150" alt="Conectar">
+<img src="img/subscribe.png" width="200" alt="Conectar">
 
 
 ```
@@ -51,7 +51,7 @@ msg.topic = "topic";
 
 ### mqtt-auto-unsubscribe
 
-<img src="img/unsubscribe.png" width="150" alt="Conectar">
+<img src="img/unsubscribe.png" width="200" alt="Conectar">
 
 ```
 msg.client_id = "client_id";
