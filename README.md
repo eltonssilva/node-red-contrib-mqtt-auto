@@ -67,7 +67,7 @@ msg.topic = "topic";
 
 This project was based on the project of **[promd76](https://www.npmjs.com/~promd76)**
 
-## Contribuição ☕️
+## Donate ☕️
 
 If this project was useful to you, help me continue developing and drinking a coffee while I'm coding.
 
@@ -78,7 +78,6 @@ If this project was useful to you, help me continue developing and drinking a co
   </a>
 </p>
 
-Para adicionar uma legenda à sua imagem, você pode envolver a tag <img> em uma tag <figure> e adicionar um elemento <figcaption> logo após a tag <img>. Aqui está como você pode fazer isso:
 
 
 | ![GRCode PIX](img/qrcode2.jpeg) | ![GRCode PayPal](img/qrcode.png) |
